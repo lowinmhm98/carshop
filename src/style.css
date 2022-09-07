@@ -1,0 +1,11 @@
+.sidebar{
+    top:5rem;
+}
+
+.sidebarwrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
