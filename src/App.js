@@ -12,20 +12,21 @@ import Stack from 'react-bootstrap/Stack'
 
 function App() {
   
-    
+  
 
   const Products = 
     [
-       <Product type= "Sport" name ="2021 Lamborghini Huracan EVO" img="./img/LamborghiniHuracanEVO.jpg" price="333633" />,
-       <Product type= "Sport" name ="2021 Mercedes-Benz AMG GT" img="./img/2021 Mercedes-Benz AMG GT.jpeg" price= " 131750"/>,
-      // <Product type= "Utility" name ="Skoda Superb 2.0 TDI SportLine 4x4 DSG" img="./img/Skoda Superb 2.0 TDI SportLine 4x4 DSG.jpg" price= "55825"/>,
-       <Product type= "Coupe" name ="ASTON MARTIN DB9 Coupé 6.0 V12 " img="./img/ASTON MARTIN DB9 Coupé 6.0 V12 (Coupé).jpg" price= "39.950"/>,
-       <Product type= "Coupe" name ="TESLA Model 3 Long R. Dual AWD (Limousine) " img="./img/TESLA Model 3 Long R. Dual AWD (Limousine)(coupe).jpg" price= "47400"/>,
-       <Product type= "Suv" name ="2021 CHEVROLET trailblazer 4dr suv " img="./img/2021_chevrolet_trailblazer_4dr-suv.jpg" price= "47400"/>,
-       <Product type= "Suv" name ="2022 VOLKSWAGEN taos 4dr suv " img="./img/2022_volkswagen_taos_4dr-suv.jpg" price= "47400"/>,
+       <Product type= "Sport" name ="2021 Lamborghini Huracan EVO" img="./img/LamborghiniHuracanEVO.jpg" price="333633" id="0" />,
+       <Product type= "Sport" name ="2021 Mercedes-Benz AMG GT" img="./img/2021 Mercedes-Benz AMG GT.jpeg" price= " 131750" id="1"/>,
+     
+       <Product type= "Coupe" name ="ASTON MARTIN DB9 Coupé 6.0 V12 " img="./img/ASTON MARTIN DB9 Coupé 6.0 V12 (Coupé).jpg" price= "39.950" id="2"/>,
+       <Product type= "Coupe" name ="TESLA Model 3 Long R. Dual AWD (Limousine) " img="./img/TESLA Model 3 Long R. Dual AWD (Limousine)(coupe).jpg" price= "47400" id="3"/>,
+       <Product type= "Suv" name ="2021 CHEVROLET trailblazer 4dr suv " img="./img/2021_chevrolet_trailblazer_4dr-suv.jpg" price= "47400" id="4"/>,
+       <Product type= "Suv" name ="2022 VOLKSWAGEN taos 4dr suv " img="./img/2022_volkswagen_taos_4dr-suv.jpg" price= "47400" id="5"/>,
        
     ]
 
+   
    
 
   

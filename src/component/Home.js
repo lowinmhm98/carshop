@@ -6,7 +6,7 @@ function Home (prop) {
     
     return (
         <div >
-        Ciao bitch
+      
         </div>
     );
 }

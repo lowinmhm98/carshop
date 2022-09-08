@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 
 import { ShoppingCart } from "./ShoppingCart";
@@ -18,19 +18,23 @@ import Stack from 'react-bootstrap/Stack'
 
 function ShoppingPage(prop) {
  const allItem = useOutletContext()
+ const [count,setCount] = useState(0)
   
   const [DisplayedProducts, setDisplayedProducts] = useState(
     allItem
   )
-
+  
+  
    
   
   const [ButtonClicked,setButtonClicked] = useState(false)
   const [CurrentIndex,setCurrentIndex] =useState(-1)
+  const [Show,setShow]= useState(true)
   
       const addCartoCart = (e) => {
        setButtonClicked(  true) ;
         setCurrentIndex(+( e.target.getAttribute("id") ))
+        setCount(count+1)
         
       }
       let handleSubcategory = (e)=> {
@@ -46,11 +50,17 @@ function ShoppingPage(prop) {
       
      let toRender= ""
       if (ButtonClicked) {
-        toRender = <ShoppingCart show={[setButtonClicked,ButtonClicked]} index={CurrentIndex}/>
+        
+        toRender = <ShoppingCart show={[setShow,Show]} index={CurrentIndex}/>
       } else {
         toRender = null
       }
 
+      useEffect(()=>{
+        setShow(true);
+      },[count])
+
+     
 
   return(
     <Container fluid className="ShoppingPage "  >
