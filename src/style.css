@@ -1,5 +1,6 @@
 .sidebar{
     top:5rem;
+    position:sticky
 }
 
 .sidebarwrapper {
