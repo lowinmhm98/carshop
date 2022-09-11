@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import  Product from "./component/Product.js";
 import Nav from  'react-bootstrap/Nav';
@@ -11,7 +11,7 @@ import Stack from 'react-bootstrap/Stack'
 
 
 function App() {
-  
+  const [search,setSearch] =useState("")
   
 
   const Products = 
@@ -29,6 +29,11 @@ function App() {
        
     ]
 
+
+    const handleSearch =(e)=> {
+      setSearch(e.target.value);
+    }
+
    
    
 
@@ -37,7 +42,7 @@ function App() {
   
   return (
     
-    <Stack className="App"  gap={3}>
+    <div className="App" >
       <Navbar bg="dark" variant="dark" sticky="top">
         <Container fluid>
         <Navbar.Brand href="#home">Car shop</Navbar.Brand>
@@ -54,14 +59,15 @@ function App() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange= {handleSearch}
             />
-            <Button variant="outline-success">Search</Button>
+           
           </Form>
         
         </Container>
       </Navbar>
-      <Outlet context={Products}/>
-    </Stack>
+      <Outlet context={[Products,search]}/>
+    </div>
     
   );
 }
