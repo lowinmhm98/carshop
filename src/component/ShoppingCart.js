@@ -24,13 +24,16 @@ function ShoppingCart (prop) {
      const newarray = [...productstobuy]
     
     
-    
-      
+    console.log(newarray)
+    console.log(id)
+    let index=  newarray.findIndex((elem)=>{
+       if (elem[0].props.id===id) {return true;}
+      })
      
      if (sign === "+") {
-       newarray[id][1] = newarray[id][1]+1
-     } else if ((newarray[id][1]-1) >= 1) {
-      newarray[id][1] = newarray[id][1]-1
+       newarray[index][1] = newarray[index][1]+1
+     } else if ((newarray[index][1]-1) >= 1) {
+      newarray[index][1] = newarray[index][1]-1
      }
      setProducts(newarray);
      
